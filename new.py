@@ -10,16 +10,14 @@ def main():
         "https://sc0.blr1.cdn.digitaloceanspaces.com/article/133739-jwdykatblz-1577670825.jpeg",
         
     ]
-    
-    # Initialize the session state for the current image index
+   
     if 'current_image' not in st.session_state:
         st.session_state.current_image = 0
 
-    # Display the current image
+
     current_image = st.session_state.current_image
     st.image(image_urls[current_image], use_column_width=True)
 
-    # Buttons to navigate through images
     col1, col2, col3 = st.columns([1, 6, 1])
     
     with col1:
