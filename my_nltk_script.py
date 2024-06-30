@@ -8,10 +8,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Initialize NLTK and download stopwords (run once)
+
 nltk.download('stopwords')
 
-# Initialize Firebase
+
 if not firebase_admin._apps:
     cred = credentials.Certificate("./serviceAccountKey.json")
     firebase_admin.initialize_app(cred)
@@ -69,12 +69,11 @@ def main():
         st.subheader(f"{loc}: {sentiment:.2f}")
         st.progress((sentiment + 1) / 2)
 
-    # Bar graph for all states
+
     st.header("Sentiment Polarity by State")
     df = pd.DataFrame(list(avg_sentiments.items()), columns=['State', 'Polarity'])
     df = df.sort_values(by='Polarity', ascending=False)
 
-    # Plotting using seaborn for horizontal bar graph
     fig, ax = plt.subplots(figsize=(10, 8))
     sns.barplot(x='Polarity', y='State', data=df, palette='viridis', ax=ax)
     ax.set_xlabel('Polarity')
