@@ -11,7 +11,6 @@ st.set_page_config(page_title="PollVue", layout="wide")
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Select a page:", ["Home", "Dashboard", "Login/Signup", "Statistics"])
 
-
 if page == "Home":
     new.main()
 elif page == "Dashboard":
