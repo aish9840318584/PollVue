@@ -1,4 +1,4 @@
-PollVue : Public Opinion Lens
+					**PollVue : Public Opinion Lens**
 PollVue is an innovative application designed for election result forecasting and public sentiment analysis using Python, NLTK, Firebase, Streamlit, and Scikit-learn.
 
 Features
